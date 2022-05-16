@@ -14,18 +14,23 @@ spec:
     gitName: github
     gitServer: https://github.com
     provider: minikube
+    registry: 10.108.198.9
   environments:
   - key: dev
+    owner: vvvsrx
+    repository: self-jx3-minikube
   - key: staging
   - key: production
   ingress:
-    domain: "192.168.49.2.nip.io"
-    externalDNS: false
+    domain: 192.168.49.2.nip.io
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: vvvsrx
   repository: bucketrepo
   secretStorage: local
   vault: {}
